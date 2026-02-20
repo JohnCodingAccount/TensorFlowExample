@@ -1,5 +1,4 @@
 import tensorflow as tf 
-import tensorflow_datasets as tfds
 
 mnist = tf.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -28,5 +27,6 @@ model.compile(optimizer='adam',
 model.fit(x_train, y_train, epochs=5)
 
 model.evaluate(x_test,  y_test, verbose=2)
+
 
 
